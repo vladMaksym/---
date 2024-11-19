@@ -78,7 +78,7 @@
     align-items: center;
     width: 31vw;
     height: 18vh;
-    padding: 1%;
+    padding: 1.2%;
     border: 5px solid #A69911;
     border-radius: 15px;
     transition: color 0.3s ease, height 0.1s ease;
@@ -124,17 +124,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.hero__buttons .button content p span {
-    color: #A69911;
-    transition: color 0.3s ease;
-    font-weight: 700;
-    font-style: italic;
-}
-
-.hero__buttons .button:hover content p span {
-    color: #0b163b;
 }
 
 .hero__buttons--fixed {
@@ -194,12 +183,6 @@
     color: #0b163b;
     transition: background-color 2s ease, color 2s ease;
 }
-
-.hero__buttons--shrink .button content p span {
-    color: #0b163b;
-    transition: color 3s ease;
-}
-
 
 .content {
     background-color: #0b163b;
