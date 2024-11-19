@@ -1,0 +1,206 @@
+* {
+    font-size: 21px;
+    line-height: 1.5rem;
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Загальні стилі для блоку hero */
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: url('imgonline-com-ua-Blur-MtJCZsQe1NavC.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    z-index: 0;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #0b163b00 57%, #0b163b 82%);
+    z-index: 1;
+}
+
+.hero__header {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 5%;
+}
+
+.hero__header h1,
+.hero__header p {
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.hero__header h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+.hero__header p {
+    width: 70%;
+    text-align: justify;
+}
+
+.hero__header img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 80vh;
+}
+
+.hero__buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+
+.hero__buttons .button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 31vw;
+    height: 18vh;
+    padding: 1%;
+    border: 5px solid #A69911;
+    border-radius: 15px;
+    transition: color 0.3s ease, height 0.1s ease;
+    overflow: hidden;
+}
+
+.hero__buttons .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 250%;
+    height: 100%;
+    background: linear-gradient(15deg, #A69911, #0b163b);
+    opacity: 0;
+    transition: opacity 0.3s ease, left 1.7s ease;
+    z-index: 0;
+}
+
+.hero__buttons .button:hover::before {
+    left: 0;
+    opacity: 1;
+}
+
+.hero__buttons .button:hover {
+    color: #0b163b;
+}
+
+.hero__buttons .button * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero__buttons .button h3 {
+    flex: 1;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.hero__buttons .button content {
+    flex: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero__buttons .button content p span {
+    color: #A69911;
+    transition: color 0.3s ease;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.hero__buttons .button:hover content p span {
+    color: #0b163b;
+}
+
+.hero__buttons--fixed {
+    position: fixed;
+    background-color: #0b163b;
+}
+
+.hero__buttons--fixed .button--tertiary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350%;
+    height: 100%;
+    background: linear-gradient(15deg, #A69911, #0b163b 120%);
+    opacity: 0;
+    transition: opacity 0.3s ease, left 1.7s ease;
+    z-index: 0;
+}
+
+.hero__buttons--fixed .button--tertiary:hover::before {
+    left: -100%;
+    opacity: 1;
+}
+
+
+/* Стиль для зменшених кнопок */
+.hero__buttons--shrink {
+    padding: 0;
+    /* Видалити зайві відступи */
+}
+
+.hero__buttons .button--shrink {
+    transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.hero__buttons .button--shrink content p {
+    opacity: 0;
+    /* Зникнення тексту */
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.hero__buttons .button--shrink h3 {
+    font-size: 1rem;
+    /* Зменшення шрифту заголовка */
+    transition: font-size 0.3s ease;
+}
+
+.hero__buttons .button--tertiary {
+    transition: background-color 0.5s ease;
+}
+
+.hero__buttons--shrink .button--tertiary {
+    background-color: #A69911;
+    color: #0b163b;
+    transition: background-color 2s ease, color 2s ease;
+}
+
+.hero__buttons--shrink .button content p span {
+    color: #0b163b;
+    transition: color 3s ease;
+}
+
+
+.content {
+    background-color: #0b163b;
+}

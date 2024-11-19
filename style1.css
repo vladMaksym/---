@@ -1,0 +1,41 @@
+.common-text-move {
+    background: black;
+    /*анимация текста*/
+    position: relative;
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: opacity .6s cubic-bezier(0, 0, .07, .87), -webkit-transform .6s cubic-bezier(0, 0, .07, .87);
+    transition: opacity .6s cubic-bezier(0, 0, .07, .87), -webkit-transform .6s cubic-bezier(0, 0, .07, .87);
+    -o-transition: transform .6s cubic-bezier(0, 0, .07, .87), opacity .6s cubic-bezier(0, 0, .07, .87);
+    transition: transform .6s cubic-bezier(0, 0, .07, .87), opacity .6s cubic-bezier(0, 0, .07, .87);
+    transition: transform .6s cubic-bezier(0, 0, .07, .87), opacity .6s cubic-bezier(0, 0, .07, .87), -webkit-transform .6s cubic-bezier(0, 0, .07, .87);
+}
+
+body {
+    /* Градиент */
+    background: linear-gradient(#03086d, #7c87bb);
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Для Chrome, Safari */
+}
+
+div {
+    width: 70%;
+    /* Ширина */
+    margin: auto;
+    /* Выравниваем по центру */
+    background-color: rgb(162, 212, 255);
+    min-height: 1400px;
+    /* Минимальная высота */
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-shadow: 0px 15px 80px rgba(0, 0, 0, 0.933);
+    /* Тень */
+    border-radius: 50px;
+    /* Слегка скруглим углы для красоты */
+}
