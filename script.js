@@ -21,7 +21,7 @@ window.addEventListener('scroll', () => {
     }
 
     // Додаткове зменшення кнопок
-    if (buttonContainer.classList.contains('hero__buttons--fixed')) {
+    if (containerPosition <= 0) {
         const buttons = document.querySelectorAll('.hero__buttons .button');
         const shrinkStart = initialButtonPosition; // Початкова точка зменшення
         const shrinkEnd = shrinkStart + 70; // Точка, коли кнопки досягають мінімального розміру
@@ -52,4 +52,5 @@ window.addEventListener('scroll', () => {
     }
 
     lastScrollY = window.scrollY;
+    
 });

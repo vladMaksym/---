@@ -1,0 +1,89 @@
+.hero__buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+
+.hero__buttons .button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 31vw;
+    height: 18vh;
+    padding: 1.2%;
+    border: 5px solid #A69911;
+    border-radius: 15px;
+    transition: color 0.3s ease, height 0.1s ease;
+    overflow: hidden;
+}
+
+.hero__buttons .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 250%;
+    height: 100%;
+    background: linear-gradient(15deg, #A69911, #0b163b);
+    opacity: 0;
+    transition: opacity 0.3s ease, left 1.7s ease;
+    z-index: 0;
+}
+
+.hero__buttons .button:hover::before {
+    left: 0;
+    opacity: 1;
+}
+
+.hero__buttons .button:hover {
+    color: #0b163b;
+}
+
+.hero__buttons .button * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero__buttons .button h3 {
+    flex: 1;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.hero__buttons .button content {
+    flex: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero__buttons--fixed {
+    position: fixed;
+    background-color: #0b163b;
+}
+
+.hero__buttons--shrink .button {
+    transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.hero__buttons--shrink .button content p {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.hero__buttons--shrink .button h3 {
+    font-size: 1.2rem;
+    transition: font-size 0.3s ease;
+}
+
+.hero__buttons--found__hint .button--tertiary {
+    background-color: #A69911;
+    color: #0b163b;
+    transition: background-color 2s ease, color 2s ease;
+}
