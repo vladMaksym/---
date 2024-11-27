@@ -1,0 +1,51 @@
+/* Основні стилі для спливаючого вікна */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0b163b;
+    padding: 20px;
+    border: 3px solid #A69911;
+    border-radius: 15px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Приховане вікно */
+.popup.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Активне вікно */
+.popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+/* Кнопка закриття */
+.popup-content button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #A69911;
+    color: #0b163b;
+    border: none;
+    border-radius: 10px;
+    cursor: url('ice_cursor.png'), auto;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.popup-content button:hover {
+    background-color: #d0b62d;
+}

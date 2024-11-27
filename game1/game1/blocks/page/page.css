@@ -1,0 +1,16 @@
+.page {
+    font-family: Gotham, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 872px;
+    background: #0b163b;
+    color: rgb(246, 246, 246);
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  

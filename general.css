@@ -1,0 +1,23 @@
+* {
+    font-size: 21px;
+    line-height: 1.5rem;
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #a6d6e0;
+    cursor: url('ice_cursor.png'), auto;
+}
+
+body {
+    background-color: #0b163b;    
+    position: relative;
+    z-index: 9999;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    color: transparent;
+    -webkit-text-stroke: 2px #A69911;
+}

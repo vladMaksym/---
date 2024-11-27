@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Найди пару</title>
+  <link rel="stylesheet" href="pages/index.css"/>
+  <link rel="stylesheet" href="../../reset.css">
+  <link rel="stylesheet" href="../../all.css">
+  <link rel="stylesheet" href="../../general.css">        
+  <link rel="stylesheet" href="../../header.css">
+  <link rel="stylesheet" href="../../buttons.css">
+  <link rel="stylesheet" href="../../eyewitness--stories__text.css">
+  <link rel="stylesheet" href="../../eyewitness--stories__mountain.css">
+  <link rel="stylesheet" href="../../hidden--yeti.css">
+  <link rel="stylesheet" href="../../in--cave.css">
+  <link rel="stylesheet" href="../../cursor.css">
+  <link rel="stylesheet" href="../../adaptive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+</head>
+<body class="page">
+  <audio id="backgroundMusic" loop style="display: none;">
+    <source src="../../Dead Forest - Brian Bolger.mp3" type="audio/mp3">
+    <source src="../../Dead Forest - Brian Bolger.ogg" type="audio/ogg">
+    <source src="../../Dead Forest - Brian Bolger.wav" type="audio/wav">
+  </audio> 
+<div class="start-screen">
+  <h1 class="start-screen__title title">Гра «Знайди парні картинки»</h1>
+  <button type="button" class="start-screen__button button"><a href="#time-screen" class="link">Начать игру</a></button>
+</div>
+
+<div class="time-screen" id="time-screen">
+  <h1 class="time-screen__title title">Оберіть тривалість гри</h1>
+  <div class="time-screen__wrapper">
+    <button type="button" class="time-screen__button button" data-time="30" id="time-screen__button_30s">
+      <a href="#game-screen" class="link time-screen__link" >30 сек</a>
+    </button>
+    <button type="button" class="time-screen__button button" data-time="45" id="time-screen__button_45s">
+      <a href="#game-screen" class="link time-screen__link">45 сек</a>
+    </button>
+    <button type="button" class="time-screen__button button" data-time="60" id="time-screen__button_60s">
+      <a href="#game-screen" class="link time-screen__link">1 хв</a>
+    </button>
+  </div>
+</div>
+
+<div class="game-screen" id="game-screen">
+  <header class="header">
+    <h2 class="header__title">Гра «Знайди парні картинки»</h2>
+    <div class="header__wrapper">
+      <p class="header__text">Ви відгадали
+        <div class="header__span-text" id="counter-of-disabled-cards">0</div>
+        з
+        <div class="header__span-text" id="total-number-of-cards"></div>
+        карточек</p>
+      <p class="header__text">Таймер <div class="header__span-text" id="timer">00:00</div></p>
+    </div>
+  </header>
+  <main class="cards">
+    <template class="template">
+      <div class="card">
+        <div class="card-back">
+        </div>
+        <div class="card-front">
+        </div>
+      </div>
+    </template>
+  </main>
+  <footer class="footer">
+    <ul class="footer__links">
+      <li class="footer__link footer__link_type_game-rules">Правила гри</li>
+      <li class="footer__link footer__link_type_new-game"><a class="link" href="#time-screen">Почати спочатку</a></li>
+    </ul>
+    <a href="../../index.html"><p class="footer__text">Знайди Єті</p></a>
+  </footer>
+</div>
+
+
+<div class="popup popup_type_game-victory">
+  <div class="popup__content popup__content_type_game-victory">
+    <button
+      type="button"
+      class="popup__close-button"
+    ></button>
+    <h1 class="popup__title popup__title_type_game-victory">Вітаємо! Ви перемогли!</h1>
+    <button type="button" class="popup__start-button button"><a class="link" href="#time-screen">Почати спочатку</a></button>
+  </div>
+</div>
+
+<div class="popup popup_type_game-rules">
+  <div class="popup__content popup__content_type_game-rules">
+    <button
+      type="button"
+      class="popup__close-button"
+    ></button>
+    <h1 class="popup__title popup__title_type_game-rules">Правила гри</h1>
+    <p class="popup__text">На початку гри картки розкладаються на екрані випадковим чином сорочкою вгору.</p>
+    <p class="popup__text">Гравець відкриває будь-які дві картки. Якщо колір на них збігається, то вони залишаються відкритими,
+      і гравець відкриває наступні дві картки. Якщо картки не збігаються за кольором,
+      то обидві картки перевертаються назад, і гравець заново починає хід.
+      Гравець повинен відкрити всі картки до того, як закінчиться час</p>
+    <p class="popup__text">Гра закінчується, коли всі карти на столі відкриті, або якщо минув час.</p>
+  </div>
+</div>
+
+<div class="popup popup_type_game-loose">
+  <div class="popup__content popup__content_type_game-loose">
+    <button
+      type="button"
+      class="popup__close-button"
+    ></button>
+    <h1 class="popup__title popup__title_type_game-loose">На жаль, ви програли...</h1>
+    <button type="button" class="popup__start-button button"><a class="link" href="#time-screen">Почати спочатку</a></button>
+  </div>
+</div>
+
+<script type="module" src="scripts/index.js"></script>
+<script type="module" src="../../music.js"></script>
+</body>
+</html>

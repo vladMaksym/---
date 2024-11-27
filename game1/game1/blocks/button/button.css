@@ -1,0 +1,82 @@
+.hero__buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  z-index: 2;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 27vw;
+  height: 15vh;
+  padding: 1% 0.3%;
+  border: 5px solid #0b163b;
+  border-radius: 15px;
+  transition: border 1s ease, height 0.1s ease;
+  overflow: hidden;
+  cursor: url('../../../../ice_cursor.png'), auto;
+  box-shadow: 0 0 2px #5e87d9, 0 0 4px #5e87d9, 0 0 6px #5e87d9, 0 0 8px #5e87d9, 0 0 10px #5e87d9, 0 0 12px #5e87d9, 0 0 14px #5e87d9;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(15deg, #5e87d9, #0b163b);
+  opacity: 0;
+  transition: opacity 0.3s ease, left 1.7s ease;
+  z-index: 0;
+}
+
+.button:hover::before {
+  left: 0;
+  opacity: 1;
+}
+
+.button:hover {
+  color: #0b163b;
+}
+
+.button * {
+  position: relative;
+  z-index: 1;
+}
+
+.button h3 {
+  flex: 1;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  color: transparent;
+  -webkit-text-stroke: 1px #A69911;
+}
+
+.button content {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 71px;
+  transition: max-height 1s ease, opacity 1s;
+}
+
+.hero__buttons--fixed {
+  position: fixed;
+  background-color: #0b163b;
+  padding: 10px 0;
+}
+
+.hero__buttons--shrink .button content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease, opacity 1s;
+}
+  

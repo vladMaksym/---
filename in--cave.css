@@ -1,0 +1,47 @@
+.in--cave {
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    gap: 1rem;
+    opacity: 0;
+    transition: all 1s ease 3s;
+}
+
+.in--cave .h2--container {
+    display: flex;
+    align-items: center;
+}
+
+.in--cave .h2--container h2 {
+    flex: 1;
+    text-align: center;
+}
+
+.in--cave .content--container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.in--cave p {
+    color: transparent;
+    transition: color 0.5s ease;
+    text-align: justify;
+}
+
+#change-color-button {
+    flex: 0.5;
+    cursor: url('ice_cursor.png'), auto;
+}
+
+#change-color-button img{
+    height: 150px;
+}
+
+.hidden--yeti--4--container {
+    flex: 0.5;
+    z-index: -2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
