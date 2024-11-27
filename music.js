@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function playAudio() {
         if (!hasInteracted) {
             const playPromise = audio.play();
-
+            
             if (playPromise !== undefined) {
                 playPromise.then(() => {
                     // Playback started successfully
@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function removeEventListeners() {
         document.removeEventListener('scroll', playAudio);
         document.removeEventListener('click', playAudio);
-        document.removeEventListener('keydown', playAudio);
+        document.removeEventListener('keydown', playAudio);   
     }
     // Add event listeners for common user interactions
     document.addEventListener('scroll', playAudio);
     document.addEventListener('click', playAudio);
-    document.addEventListener('keydown', playAudio);
+    document.addEventListener('keydown', playAudio);   
 });
