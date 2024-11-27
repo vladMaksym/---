@@ -1,0 +1,26 @@
+.snowflake {
+    position: absolute;
+    top: -50px; /* Начало сверху за экраном */
+    font-size: 25px;
+    opacity: 0.8;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    animation: fall linear infinite;
+}
+
+.snowflake .inner {
+    animation: spin infinite linear;
+}
+  
+@keyframes fall {
+    to {
+      transform: translateY(490vh); /* Движение ниже экрана */
+    }
+}
+  
+ @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+}
+  

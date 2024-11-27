@@ -1,81 +1,205 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЙеТі</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="buttons.css">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header class="hero">
-    <audio id="backgroundMusic" loop style="display: none;">
-        <source src="Dead Forest - Brian Bolger.mp3" type="audio/mp3">
-        <source src="Dead Forest - Brian Bolger.ogg" type="audio/ogg">
-        <source src="Dead Forest - Brian Bolger.wav" type="audio/wav">
-        Your browser does not support the audio element.
-    </audio>
-    <section class="hero">
-        <div class="hero__header">
-            <h1>Снігова людина <br> Міф чи реальність?</h1>
-            <p>
-                Усі знають міф про єті — міфічну "снігову людину", яка, за легендами, мешкає в Гімалаях. Ви — амбітний науковець, що вирушив на пошуки йєті, аби здійснити свою дитячу мрію.
-                Подорожуючи засніженими схилами, ви слухаєте розповіді місцевих жителів про загадкові сліди й моторошні звуки. Тижні пошуків здаються марними, поки одного вечора у віддаленій печері ви не знаходите шматок хутра. Це відкриття дає надію, що єті десь поруч.
-                Чи стане це доказом легенди, чи міф залишиться нерозгаданим? Все залежить від вашої рішучості!
-            </p>
-            <img src="1.png" alt="Єті на заголовку">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ЙеТі</title>        
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="all.css">
+        <link rel="stylesheet" href="cursor.css">
+        <link rel="stylesheet" href="snow.css">
+        <link rel="stylesheet" href="general.css">        
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="buttons.css">
+        <link rel="stylesheet" href="eyewitness--stories__text.css">
+        <link rel="stylesheet" href="eyewitness--stories__mountain.css">
+        <link rel="stylesheet" href="hidden--yeti.css">
+        <link rel="stylesheet" href="in--cave.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="popup.css">
+        <link rel="stylesheet" href="adaptive.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <audio id="backgroundMusic" loop style="display: none;">
+            <source src="Dead Forest - Brian Bolger.mp3" type="audio/mp3">
+            <source src="Dead Forest - Brian Bolger.ogg" type="audio/ogg">
+            <source src="Dead Forest - Brian Bolger.wav" type="audio/wav">
+        </audio>
+        
+        <div class="snowflake">
+            <div class="inner">❅</div>
         </div>
-        <nav class="hero__buttons">
-            <button class="button">
-                <h3>Гра 1</h3>
-                <content>
-                    <p>Перевіримо пам'ять досліника!</p>
-                </content>
-            </button>
-            <button class="button">
-                <h3>Гра 2</h3>
-                <content>
-                    <p>Ставлю сотку, ти не знайдеш шлях до єті&#x0029;</p>
-                </content>
-            </button>
-            <button class="button button--tertiary">
-                <h3>Лічильник: 0/5</h3>
-                <content>
-                    <p>Знайди всі сліди єті на сайті.</p>
-                </content>
-            </button>
-        </nav>
-    </header>
+        <div class="cursor"></div>
 
-    <main>
-        <section class="eyewitness--stories">
-            <content class="eyewitness--stories__content">
-                <h2>Історії очевидців</h2>
-                <h3>Таємничий силует у тумані</h3>
+        <header id="hero" class="hero">
+            <div class="hero__header">
+                <h2>Снігова людина <br> Міф чи реальність?</h2>
                 <p>
-                    «Це сталося на світанку, коли гори ще спали під ковдрою густого туману. Я чітко побачив величезний силует, який швидко зник серед дерев. Я клянусь, це був не ведмідь. Його постать і рухи були людськими, але надто великими, щоб бути звичайною людиною».
+                    Усі знають міф про єті — міфічну "снігову людину", яка, за легендами, мешкає в Гімалаях. Ви — амбітний науковець, що вирушив на пошуки йєті, аби здійснити свою дитячу мрію.
+                    Подорожуючи засніженими схилами, ви слухаєте розповіді місцевих жителів про загадкові сліди й моторошні звуки. Тижні пошуків здаються марними, поки одного вечора у віддаленій печері ви не знаходите шматок хутра. Це відкриття дає надію, що єті десь поруч.
+                    Чи стане це доказом легенди, чи міф залишиться нерозгаданим? Все залежить від вашої рішучості!
                 </p>
-                <p>
-                    - Місцевий мисливець, 1985 рік
-                </p>
-            </content>
-            <content>
-                <h3>Сліди, що ведуть у невідоме</h3>
-                <p>
-                    «Ми знайшли відбитки величезних ніг на снігу. Вони були значно більші за людські, але надто чіткі для ведмежих. Сліди вели у напрямку старої печери, але ми не наважилися йти далі».
-                </p>
-                <p>
-                    - Група туристів, 1992 рік
-                </p>
-            </content>
-        </section>
-    </main>
+                <img src="1.png" alt="Єті на заголовку">
+            </div>
+            <nav class="hero__buttons">
+                <button class="button">
+                    <h3>Гра 1</h3>
+                    <content>
+                        <p>Перевіримо пам'ять досліника!</p>
+                    </content>
+                </button>
+                <button class="button">
+                    <h3>Гра 2</h3>
+                    <content>
+                        <p>Ставлю сотку, ти не знайдеш шлях до єті&#x0029;</p>
+                    </content>
+                </button>
+                <button id="mountain--mover" class="button">
+                    <h3>Лічильник: 0/4</h3>
+                    <content>
+                        <p>Знайди всі сліди єті на сайті.</p>
+                    </content>
+                </button>
+            </nav>
 
-    <script src="script.js"></script>
-</body>
+            <div class="menu">
+                <div class="menu-toggle" id="menuToggle">
+                    <div class="hamburger"></div>
+                </div>
+                <button id="mountain--mover-1" class="menu-toggle lefter button">
+                    <h3>Лічильник: 0/4</h3>
+                </button>
+            </div>
+            <nav class="mobile-menu" id="mobileMenu">
+                <button class="button"><a href=""><h3>Гра 1</h3></a></button>
+                <button class="button"><a href=""><h3>Гра 2</h3></a></button>
+            </nav>
+        </header>
+
+        <main>
+            <section id="eyewitness--stories" class="eyewitness--stories">
+                <content class="eyewitness--stories__content">
+
+                    <h2>Історії очевидців</h2>
+                               
+                    <div class="hidden-yeti">
+                        <div class="hidden-yeti__img">
+                            <img class="nails" src="кігті.png" alt="кігті">
+                            <img class="first_yeti" src="єті.png" alt="єті" id="hidden--yeti--1">
+                        </div>
+                        <div class="hidden-yeti__text">
+                            <div class="h3--container"><h3 class="left--edge">Таємничий силует у тумані</h3><img src="header-flourish.svg"></div>
+                            <p class="first">«Це сталося на світанку, коли гори ще спали під ковдрою густого туману. Я чітко побачив величезний силует, який швидко зник серед дерев. Я клянусь, це був не ведмідь. Його постать і рухи були людськими, але надто великими, щоб бути звичайною людиною»</p>
+                            <p class="author first">
+                                - Місцевий мисливець, 1985 рік
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="h3--container"><img src="header-flourish-2.svg"><h3>Погляд крізь кущі</h3><img src="header-flourish.svg"></div>
+                    <p>
+                        «Я збирав ягоди неподалік від нашого села. Було тихо, лише птахи співали. Раптом я відчув, що за мною спостерігають. Озирнувшись, я побачив обличчя серед кущів — величезне, вкрите хутром. Його очі виглядали майже людськими. Я замахнувся палицею, але це створіння різко відскочило й зникло. Мої сусіди казали, що це міг бути лише п’яний жартівник у костюмі. Але ж я знаю, що бачив...»
+                    </p>
+                    <p class="author">
+                        - Житель села, 1998 рік
+                    </p>                      
+
+                    <div class="h3--container"><img src="header-flourish-2.svg"><h3>Тіні на вершині</h3><img src="header-flourish.svg"></div>
+                    <p>
+                        «Це було під час сходження на одну з маловідомих вершин Гімалаїв. Я відстав від групи й самотужки піднімався стежкою. На сусідньому схилі я побачив рух. Там було щось велике, майже людське, але дуже високе. Силует зупинився, ніби дивився в мій бік, а потім зник. Я не зміг знайти жодного сліду, але цей образ досі перед очима»
+                    </p>
+                    <p class="author">
+                        - Альпініст, 2003 рік
+                    </p>
+                    
+                    <div class="h3--container"><img src="header-flourish-2.svg"><h3>Дивні звуки ночі</h3><img src="header-flourish.svg"></div>
+                    <p>
+                        «Ми розклали табір біля лісу, на висоті близько 3000 метрів. Уночі нас розбудив звук — щось середнє між ревом і голосом, якого я ніколи раніше не чув. Ми вийшли з наметів, освітлюючи околиці ліхтарями, але не побачили нічого, окрім зламаних гілок. Наступного ранку знайшли великі відбитки ніг біля табору. Хтось жартував, що це був ведмідь. Але ведмеді так не звучать»
+                    </p>
+                    <p class="author">
+                        - Туристична група, 2015 рік
+                    </p>
+                    
+                    <div class="hidden-yeti">
+                        <div class="hidden-yeti__text">
+                            <div class="h3--container"><img src="header-flourish-2.svg"><h3 class="right--edge">Сліди, що ведуть у невідоме</h3></div>
+                            <p>«Ми знайшли відбитки величезних ніг на снігу. Вони були значно більші за людські, але надто чіткі для ведмежих. Сліди вели у напрямку старої печери, але ми не наважилися йти далі»</p>
+                            <p class="author">
+                                - Група туристів, 1992 рік
+                            </p>
+                        </div>
+                        <div class="hidden-yeti__img">
+                            <img class= "footprint" src="foot_2.png"  alt="Відбитки великих ніг на снігу"> 
+                            <img class="first_yeti first_yeti-2" src="єті.png" alt="Перший єті"id="hidden--yeti--2">
+                        </div>
+                    </div>     
+
+                </content>
+
+                <svg class="eyewitness--stories__mountains" xmlns="http://www.w3.org/2000/svg" viewBox="3 0 95 100" preserveAspectRatio="none">
+                    <polygon id="mountain-1" points="0,20 0.5,21 0.8,21.5 1,22 3,27 5,30 6,33 7,35 7.5,38 8,40 8.5,47 9,50 9.1,49 9.2,47 9.3,45 9.3,43 9.5,42 10,40 10.3,40 12,42 13,42 13.5,44 14.1,48 14.2,50 14.6,54 15.8,57 15.9,58 16,60 16.6,68 16.8,69 17,70 17.2,72 17.3,75 17.5,78 17.6,80 17.7,81 17.8,82 17.9,83 18,84 18.1,85.5 18.2,87 18.3,88 18.4,89 18.5,90 18.6,91 18.7,91.5 18.8,92 18.9,93 19,94 19.1,95.5 19.2,96 19.3,97 19.4,98 19.5,98.5 19.6,99 19.7,99.3 19.8,99.5 19.9,99.8 19.9,99.9 20,100 0,100" 
+                        fill="#040c25" stroke="#fff" stroke-width="0.2" />
+                    <polygon id="mountain-2" points="100,13 98,20 95,25 94,28 93,30 92,45 90,55 89,60 88,63 86,65 83,70 82,79 81,90 80,99 80,100 100,100" 
+                        fill="#040c25" opacity="0.5" stroke="#fff" stroke-width="0.2" />
+                    <polygon id="mountain-3" class="mountain" points="100,50 99,55 98,59 97,60 96,63 95,64 94,63 95,65 94,60 93,56 92,57 91,49 90,50 89,55 88,60 87,63 86,68 85,70 84,74 83,76 82,95 81,98 80,100 100,100" 
+                        fill="#040c25" stroke="#A69911" stroke-width="0.2" />
+                </svg>
+
+                <img class="under--mountain--yeti" src="єті.png" alt="єті" id="hidden--yeti--3">
+            </section>
+
+            <section id="in--cave" class="in--cave">        
+                <div class="h2--container">
+                    <button id="change-color-button"><img src="lightning-off.png" alt=""></button>
+                    <h2>Зустріч з легендою</h2>
+                    <div class="hidden--yeti--4--container"><img id="hidden--yeti--4" src="єті.png"></div>
+                </div>
+                <div class="content--container">
+                    <p>Ви вирішили віднайти ту саму печеру і стати першою людиною, яка побачить єті. Мрія, що здавалася недосяжною, тепер була ближчою, ніж будь-коли.</p>
+                    <p>Щось незвичне в повітрі... Туман обгортав усе навколо, наче невидима завіса, що приховує таємниці гір. Вітер приніс дивний звук – щось схоже на далекий рик чи глибоке дихання, яке здається нереальним. Ви зупиняєтеся, прислухаючись до темряви. Чи це лише гра вашої уяви? Чи, можливо, ви не самі?</p>
+                    <p>Навколо панує абсолютна тиша, але кожен крок резонує, як удар дзвону. Здається, з кожною миттю невідомість стає ближчою. Ви помічаєте сліди на снігу, які раніше не бачили. Вони величезні, чіткі, і їх відбитки ведуть далі вглиб, туди, де сніг перетворюється на лід.</p>
+                    <p>Коли ви нарешті опинилися в серці печери, відчуття простору зникає, залишаючи лише напружену тишу, настільки глибоку, що чути навіть власне серцебиття. Тіні на стінах здаються рухливими, наче живими. Раптом – ледь помітний рух у темряві. Ви тримаєте дихання, не наважуючись поворухнутися.</p>
+                    <p>Здається, саме повітря тут сповнене загадок. Щось спостерігає за вами. Ви відчуваєте це кожною клітиною тіла. Чи готові ви подивитися в очі легенді?</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Легенда про єті. Підготувала команда Ctrl+S+M+V.</p>
+                <nav class="footer-links">
+                    <a href="#hero">На початок</a> |
+                    <a href="#eyewitness--stories">Історії очевидців</a> |
+                    <a href="#in--cave">Печера</a>
+                </nav>
+                <div class="footer-socials">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <div id="popup" class="popup hidden">
+            <div class="popup-content">
+                <h3>Вітаємо!</h3>
+                <p>Ви знайшли всіх єті! Легенда тепер ваша.</p>
+                <button id="close-popup">Закрити</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="snow.js"></script>
+        <script src="cursor.js"></script>
+
+    </body>
 </html>

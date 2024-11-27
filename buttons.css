@@ -5,85 +5,138 @@
     z-index: 2;
 }
 
-.hero__buttons .button {
+.button {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 31vw;
-    height: 18vh;
-    padding: 1.2%;
-    border: 5px solid #A69911;
+    width: 27vw;
+    height: 15vh;
+    padding: 1% 0.3%;
+    border: 5px solid #0b163b;
     border-radius: 15px;
-    transition: color 0.3s ease, height 0.1s ease;
+    transition: border 1s ease, height 0.1s ease;
     overflow: hidden;
+    cursor: url('ice_cursor.png'), auto;
+    box-shadow: 0 0 2px #5e87d9, 0 0 4px #5e87d9, 0 0 6px #5e87d9, 0 0 8px #5e87d9, 0 0 10px #5e87d9, 0 0 12px #5e87d9, 0 0 14px #5e87d9;
 }
 
-.hero__buttons .button::before {
+.button::before {
     content: "";
     position: absolute;
     top: 0;
     left: -100%;
-    width: 250%;
+    width: 200%;
     height: 100%;
-    background: linear-gradient(15deg, #A69911, #0b163b);
+    background: linear-gradient(15deg, #5e87d9, #0b163b);
     opacity: 0;
     transition: opacity 0.3s ease, left 1.7s ease;
     z-index: 0;
 }
 
-.hero__buttons .button:hover::before {
+.button:hover::before {
     left: 0;
     opacity: 1;
 }
 
-.hero__buttons .button:hover {
+.button:hover {
     color: #0b163b;
 }
 
-.hero__buttons .button * {
+.button * {
     position: relative;
     z-index: 1;
 }
 
-.hero__buttons .button h3 {
+.button h3 {
     flex: 1;
     font-size: 1.4rem;
     display: flex;
     align-items: center;
+    color: transparent;
+    -webkit-text-stroke: 1px #A69911;
 }
 
-.hero__buttons .button content {
+.button content {
     flex: 1.4;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-height: 71px;
+    transition: max-height 1s ease, opacity 1s;
 }
 
 .hero__buttons--fixed {
     position: fixed;
     background-color: #0b163b;
+    padding: 10px 0;
 }
 
-.hero__buttons--shrink .button {
-    transition: height 0.3s ease, padding 0.3s ease;
-}
-
-.hero__buttons--shrink .button content p {
+.hero__buttons--shrink .button content {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
+    transition: max-height 1s ease, opacity 1s;
 }
 
-.hero__buttons--shrink .button h3 {
-    font-size: 1.2rem;
-    transition: font-size 0.3s ease;
+.menu {
+    display: none;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background: #0b163b00;
+    z-index: 99;
+    align-items: center;
+    justify-content: end;
+    padding: 4%;
+    transition: background 0.5s ease;
 }
 
-.hero__buttons--found__hint .button--tertiary {
-    background-color: #A69911;
-    color: #0b163b;
-    transition: background-color 2s ease, color 2s ease;
+.menu-toggle {
+    display: none;
+    position: fixed;
+}
+
+.menu-toggle.lefter {
+    right: 60px;
+}    
+
+.menu-toggle .hamburger {
+    width: 30px;
+    height: 3px;
+    background: #5e87d9;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: #5e87d9;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.menu-toggle .hamburger::before {
+    top: -10px;
+}
+
+.menu-toggle .hamburger::after {
+    bottom: -10px;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    align-items: center;
+    right: 54px;
+    padding: 6px;
+    background: #0b163b00;
+    width: 80vw;
+    height: 50px;
+    gap: 5%;
+    z-index: 100;
 }

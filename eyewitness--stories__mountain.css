@@ -1,0 +1,50 @@
+.eyewitness--stories__mountains {
+    position: absolute;
+    top: 100vh;
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
+}
+
+.eyewitness--stories__mountains--fixed {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
+}
+
+.mountain {
+    transition: transform 0.3s ease-in-out 0s;
+    transform-origin: center;
+    transition-delay: 0.5s;
+    z-index: 0;
+}
+
+.mountain--move {
+    transform: translateX(7%) !important;
+}
+
+#mountain-1,
+#mountain-2 {
+    transition: all 3s ease;
+}
+
+#mountain-3 {
+    transition: all 1s ease;
+}
+
+.mountain-expand {
+    transform: scaleX(15) scaleY(2.7) !important;
+    transform-origin: left !important;
+}
+
+.mountain-slide-right {
+    transform: scaleX(5) !important;
+}
+
+.text-slide-right {
+    transform: translateX(150%);
+    opacity: 0;
+    transition: all 1s ease;
+}

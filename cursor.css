@@ -1,0 +1,19 @@
+span {
+  width: 5px;
+  height: 5px;
+  background: url(snow.png);
+  background-size: cover;
+  pointer-events: none;
+  position: absolute;
+  animation: snow 2s linear forwards;
+}
+
+@keyframes snow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(50%, 1000%);
+    opacity: 0;
+  }
+}
