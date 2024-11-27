@@ -26,18 +26,12 @@ let initialButtonPosition = null;
 let initialMountainPosition = null;
 let maxHeight = 15; // Максимальна висота кнопок у vh
 let minHeight = 9; // Мінімальна висота кнопок у vh
-let initialMountainPosition = null;
-let maxHeight = 15; // Максимальна висота кнопок у vh
-let minHeight = 9; // Мінімальна висота кнопок у vh
 
 window.addEventListener('scroll', () => {
     const buttonContainer = document.querySelector('.hero__buttons');
     const mountainContainer = document.querySelector('.eyewitness--stories__mountains');
     const yetiContainer = document.querySelector('.under--mountain--yeti');
-    const mountainContainer = document.querySelector('.eyewitness--stories__mountains');
-    const yetiContainer = document.querySelector('.under--mountain--yeti');
 
-    // Ініціалізація початкових позицій
     // Ініціалізація початкових позицій
     if (initialButtonPosition === null) {
         initialButtonPosition = buttonContainer.getBoundingClientRect().top + window.scrollY;
@@ -49,19 +43,10 @@ window.addEventListener('scroll', () => {
 
     const buttonContainerPosition = buttonContainer.getBoundingClientRect().top;
     const mountainContainerPosition = mountainContainer.getBoundingClientRect().top;
-    if (initialMountainPosition === null) {
-        initialMountainPosition = mountainContainer.getBoundingClientRect().top + window.scrollY;
-    }
 
-    const buttonContainerPosition = buttonContainer.getBoundingClientRect().top;
-    const mountainContainerPosition = mountainContainer.getBoundingClientRect().top;
-
-    // Додаємо/знімаємо фіксований клас для кнопок
-    if (buttonContainerPosition <= 10 && window.scrollY > lastScrollY) {
     // Додаємо/знімаємо фіксований клас для кнопок
     if (buttonContainerPosition <= 10 && window.scrollY > lastScrollY) {
         buttonContainer.classList.add('hero__buttons--fixed');
-        buttonContainer.classList.add('hero__buttons--shrink');
         buttonContainer.classList.add('hero__buttons--shrink');
     } 
     else if (window.scrollY <= initialButtonPosition && window.scrollY < lastScrollY) {
@@ -78,18 +63,7 @@ window.addEventListener('scroll', () => {
         yetiContainer.classList.remove('under--mountain--yeti--fixed');
     }
 
-    // Додаємо/знімаємо фіксований клас для гір
-    if (mountainContainerPosition <= 0 && window.scrollY > lastScrollY) {
-        mountainContainer.classList.add('eyewitness--stories__mountains--fixed');
-        yetiContainer.classList.add('under--mountain--yeti--fixed');
-    } 
-    else if (window.scrollY <= initialMountainPosition && window.scrollY < lastScrollY) {
-        mountainContainer.classList.remove('eyewitness--stories__mountains--fixed');
-        yetiContainer.classList.remove('under--mountain--yeti--fixed');
-    }
-
     // Додаткове зменшення кнопок
-    if (buttonContainerPosition <= 0) {
     if (buttonContainerPosition <= 0) {
         const buttons = document.querySelectorAll('.hero__buttons .button');
         const shrinkStart = initialButtonPosition; // Початкова точка зменшення
@@ -110,10 +84,6 @@ window.addEventListener('scroll', () => {
                 buttonContainer.classList.remove('hero__buttons--shrink');
             }
 
-
-            if (newHeight >= 9 && window.scrollY < lastScrollY) {
-                buttonContainer.classList.remove('hero__buttons--shrink');
-            }
 
         } else if (window.scrollY >= shrinkEnd) {
             // Встановлюємо мінімальний розмір, якщо прокрутка перевищує кінець
